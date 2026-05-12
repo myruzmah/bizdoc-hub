@@ -467,6 +467,188 @@
   .bg-deep  .signature { filter: brightness(0) invert(1); opacity: 0.16; }
 
 
+
+  /* === INSTAGRAM PROFILE MOCKUP === */
+  .ig-profile {
+    background: var(--milk);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    padding: 36px 32px;
+  }
+  .ig-top { display: flex; gap: 36px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+  .ig-avatar {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: var(--milk-soft);
+    border: 3px solid var(--gold);
+    flex-shrink: 0;
+    position: relative; overflow: hidden;
+  }
+  .ig-avatar .pm-mark {
+    width: 200%; height: 200%;
+    background-image: var(--logo);
+    background-position: center; background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(0.22) sepia(0.5) saturate(2.5) hue-rotate(105deg);
+    opacity: 0.85; position: absolute; top: -50%; left: -50%;
+  }
+  .ig-info { flex: 1; min-width: 240px; }
+  .ig-username {
+    font-size: 22px; font-weight: 600;
+    color: var(--charcoal); letter-spacing: -0.005em;
+    margin-bottom: 12px;
+  }
+  .ig-stats { display: flex; gap: 32px; margin-bottom: 14px; }
+  .ig-stat { font-size: 13px; color: var(--charcoal); }
+  .ig-stat b { font-weight: 700; }
+  .ig-name { font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 2px; }
+  .ig-bio { font-size: 13px; color: var(--charcoal); line-height: 1.5; outline: none; }
+  .ig-bio a, .ig-link { color: var(--green); font-weight: 600; }
+  .ig-link {
+    display: inline-block; margin-top: 6px;
+    font-size: 13px; padding: 4px 0;
+  }
+
+  /* === IG PINNED GRID === */
+  .ig-pinned {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-top: 8px;
+  }
+  .ig-pin-tile {
+    aspect-ratio: 4 / 5;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    background: var(--green);
+    color: var(--milk);
+    padding: 16px 14px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease;
+  }
+  .ig-pin-tile:hover { transform: translateY(-2px); }
+  .ig-pin-tile.alt { background: var(--milk); color: var(--green-ink); border: 1px solid var(--hairline); }
+  .ig-pin-tile.deep { background: var(--green-ink); }
+  .ig-pin-tile .pin-mark {
+    position: absolute; top: 8px; right: 8px;
+    width: 18px; height: 18px;
+    border-radius: 50%; background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; color: var(--green-ink);
+  }
+  .ig-pin-tile .pin-eyebrow {
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    opacity: 0.75;
+  }
+  .ig-pin-tile .pin-title {
+    font-size: 22px; font-weight: 700;
+    letter-spacing: -0.015em; line-height: 1.1;
+  }
+  .ig-pin-tile .pin-meta {
+    font-size: 9px; font-weight: 500; opacity: 0.7;
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+
+  /* === CONTENT TYPE TAGS === */
+  .ct-tag {
+    display: inline-block;
+    padding: 2px 8px; border-radius: 999px;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-right: 6px;
+  }
+  .ct-broll    { background: rgba(27,77,62,0.1); color: var(--green); }
+  .ct-motion   { background: rgba(180,140,76,0.18); color: var(--gold); }
+  .ct-face     { background: var(--green); color: var(--milk); }
+  .ct-ai       { background: var(--gold); color: var(--green-ink); }
+  .ct-random   { background: var(--milk-soft); color: var(--green-ink); border: 1px solid var(--hairline); }
+  .ct-founder  { background: var(--green-ink); color: var(--milk); }
+  .ct-carousel { background: var(--green); color: var(--milk); }
+  .ct-story    { background: var(--milk-soft); color: var(--charcoal); border: 1px solid var(--hairline); }
+  .ct-reel     { background: var(--gold); color: var(--green-ink); }
+  .ct-post     { background: var(--green-ink); color: var(--milk); }
+
+  /* === IG WEEKLY CALENDAR === */
+  .ig-cal { margin-bottom: 48px; }
+  .ig-cal-grid {
+    display: grid;
+    grid-template-columns: 60px repeat(3, 1fr);
+    gap: 8px;
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .ig-cal-cell {
+    background: var(--milk);
+    padding: 14px 14px;
+    border-right: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    font-size: 12px; line-height: 1.5;
+  }
+  .ig-cal-cell.head {
+    background: var(--milk-soft);
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green);
+    text-align: center; padding: 12px 8px;
+  }
+  .ig-cal-cell.day-label {
+    background: var(--green); color: var(--milk);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    display: flex; align-items: center; justify-content: center;
+    border-right: 1px solid var(--hairline);
+  }
+  .ig-cal-cell .item-name {
+    font-weight: 600; color: var(--charcoal);
+    margin-top: 4px; margin-bottom: 4px;
+  }
+  .ig-cal-cell .item-desc {
+    font-size: 11px; color: var(--muted);
+  }
+  @media (max-width: 880px) {
+    .ig-cal-grid { grid-template-columns: 1fr; }
+    .ig-cal-cell.day-label { border-radius: 0; }
+  }
+
+  /* === BIG-COLUMN LIST (used in How We Do) === */
+  .step-num {
+    color: var(--gold);
+    font-size: 28px; font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+  .doc-list {
+    margin-top: 24px;
+    display: flex; flex-direction: column;
+    gap: 16px;
+  }
+  .doc-list .row {
+    display: flex; gap: 18px; padding: 14px 0;
+    border-bottom: 1px solid rgba(255,251,235,0.18);
+    font-size: 30px; font-weight: 500; line-height: 1.4;
+  }
+  .bg-milk .doc-list .row { border-color: rgba(27,77,62,0.12); }
+  .doc-list .row:last-child { border: none; }
+  .doc-list .dot { color: var(--gold); font-weight: 700; }
+
+  .industry-list {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px;
+    margin-top: 24px;
+  }
+  .industry-list .ind {
+    font-size: 36px; font-weight: 600; letter-spacing: -0.005em;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,251,235,0.18);
+  }
+  .bg-milk .industry-list .ind { border-color: rgba(27,77,62,0.12); }
+
   /* === FOUNDER QUOTE SLIDE === */
   .founder-quote-mark {
     font-size: 260px; line-height: 0.7;
@@ -2249,12 +2431,921 @@ Built to last.</pre>
 
   <!-- INSTAGRAM section -->
   <section class="platform-section" data-platform-content="instagram">
-    <div class="coming-soon">
-      <span class="cs-badge">Coming next</span>
-      <h2>Instagram</h2>
-      <p>Same content, adapted for Instagram feed (1080×1350), reels (1080×1920), and stories. The captions stay; the layouts change. Ask me when you're ready.</p>
+
+  <!-- ====== INSTAGRAM PROFILE ====== -->
+  <div class="ig-profile" id="ig-profile">
+    <div class="ig-top">
+      <div class="ig-avatar"><div class="pm-mark"></div></div>
+      <div class="ig-info">
+        <div class="ig-username" contenteditable="true" data-key="ig-username">bizdoc.ng</div>
+        <div class="ig-stats">
+          <div class="ig-stat"><b contenteditable="true" data-key="ig-posts">128</b> posts</div>
+          <div class="ig-stat"><b contenteditable="true" data-key="ig-followers">12.4K</b> followers</div>
+          <div class="ig-stat"><b contenteditable="true" data-key="ig-following">204</b> following</div>
+        </div>
+        <div class="ig-name" contenteditable="true" data-key="ig-name">Bizdoc Nigeria</div>
+        <div class="ig-bio" contenteditable="true" data-key="ig-bio">Papers that actually protect.<br/>CAC · TIN · NAFDAC · CBN · everything in between.<br/>📍 Lagos · Abuja · Jos</div>
+        <a class="ig-link" href="https://hamzury.com/bizdoc" target="_blank" contenteditable="true" data-key="ig-link">🔗 hamzury.com/bizdoc</a>
+      </div>
     </div>
-  </section>
+
+    <div class="pm-section" style="margin-top:20px">
+      <div class="pm-section-label">Story highlights · tap to view</div>
+      <div class="highlights-row">
+        <div class="highlight" onclick="openViewer('whatwedo')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-1">What we do</div></div>
+        <div class="highlight" onclick="openViewer('howwedo')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-2">How we do it</div></div>
+        <div class="highlight" onclick="openViewer('industries')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-3">Industries</div></div>
+        <div class="highlight" onclick="openViewer('tax')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-4">Tax Trap</div></div>
+        <div class="highlight" onclick="openViewer('shield')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-5">Shield</div></div>
+        <div class="highlight" onclick="openViewer('legal')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-6">Legal</div></div>
+        <div class="highlight" onclick="openViewer('travel')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="ig-hl-7">Travel</div></div>
+      </div>
+    </div>
+
+    <div class="pm-section">
+      <div class="pm-section-label">📌 Pinned posts · tap to scroll</div>
+      <div class="ig-pinned">
+        <div class="ig-pin-tile" onclick="document.getElementById('ig-pin-1').scrollIntoView({behavior:'smooth'})">
+          <div class="pin-mark">📌</div>
+          <div><div class="pin-eyebrow" contenteditable="true" data-key="ig-tile-1-eyebrow">Pin 01</div><div class="pin-title" contenteditable="true" data-key="ig-tile-1-title">What we do.</div></div>
+          <div class="pin-meta">6 slides · Carousel</div>
+        </div>
+        <div class="ig-pin-tile alt" onclick="document.getElementById('ig-pin-2').scrollIntoView({behavior:'smooth'})">
+          <div class="pin-mark">📌</div>
+          <div><div class="pin-eyebrow" contenteditable="true" data-key="ig-tile-2-eyebrow" style="color:var(--green)">Pin 02</div><div class="pin-title" contenteditable="true" data-key="ig-tile-2-title">How we do it.</div></div>
+          <div class="pin-meta">8 slides · Carousel</div>
+        </div>
+        <div class="ig-pin-tile deep" onclick="document.getElementById('ig-pin-3').scrollIntoView({behavior:'smooth'})">
+          <div class="pin-mark">📌</div>
+          <div><div class="pin-eyebrow" contenteditable="true" data-key="ig-tile-3-eyebrow">Pin 03</div><div class="pin-title" contenteditable="true" data-key="ig-tile-3-title">Industry packages.</div></div>
+          <div class="pin-meta">9 slides · Carousel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="section ig-cal" id="ig-cal">
+  <div class="section-eyebrow">Instagram · Week plan</div>
+  <div class="section-name">Posts · Stories · Reels — one full week</div>
+  <div class="section-desc">Three lanes. Seven days. Six content types: B-roll · Motion graphic · Face video · AI · Random (lifestyle) · Founder quote.</div>
+  <div class="ig-cal-grid">
+    <div class="ig-cal-cell head">Day</div>
+    <div class="ig-cal-cell head">Feed post</div>
+    <div class="ig-cal-cell head">Stories</div>
+    <div class="ig-cal-cell head">Reel</div>
+
+    <div class="ig-cal-cell day-label">Mon</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-carousel">Carousel</span><div class="item-name">Pin 1 · What we do</div><div class="item-desc">6-slide pinned post</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">Day 1 anchors</div><div class="item-desc">CAC + TIN stories</div></div><div class="ig-cal-cell"><span class="ct-tag ct-broll">B-roll</span><div class="item-name">The letter from FIRS</div><div class="item-desc">Phone close-up + founder cut</div></div>
+
+    <div class="ig-cal-cell day-label">Tue</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-random">Random</span><div class="item-name">Random — desk photo</div><div class="item-desc">Aesthetic high-res shot of certificates</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">Day 2 carousel split</div><div class="item-desc">PENCOM · ITF · NSITF reveal</div></div><div class="ig-cal-cell"><span class="ct-tag ct-motion">Motion</span><div class="item-name">5 steps in 20 sec</div><div class="item-desc">Animated text-only reel</div></div>
+
+    <div class="ig-cal-cell day-label">Wed</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-carousel">Carousel</span><div class="item-name">Pin 2 · How we do it</div><div class="item-desc">8-slide pinned post</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">BTS — the office</div><div class="item-desc">Behind-the-scenes phone shots</div></div><div class="ig-cal-cell"><span class="ct-tag ct-face">Face video</span><div class="item-name">Founder explains shield</div><div class="item-desc">Talking head, milk wall</div></div>
+
+    <div class="ig-cal-cell day-label">Thu</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-post">Post</span><div class="item-name">Industry feature — Mining</div><div class="item-desc">Photo of mining site + caption</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">Poll · A or B</div><div class="item-desc">Engagement DM bait</div></div><div class="ig-cal-cell"><span class="ct-tag ct-ai">AI</span><div class="item-name">AI scene — every industry</div><div class="item-desc">Generated visual sequence</div></div>
+
+    <div class="ig-cal-cell day-label">Fri</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-carousel">Carousel</span><div class="item-name">Tax Trap carousel</div><div class="item-desc">5 slides + founder quote slide</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">Day-of-life</div><div class="item-desc">Filing day timelapse</div></div><div class="ig-cal-cell"><span class="ct-tag ct-face">Face video</span><div class="item-name">Founder · The hard paper</div><div class="item-desc">30-sec founder address</div></div>
+
+    <div class="ig-cal-cell day-label">Sat</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-post">Post</span><div class="item-name">Industry feature — Travel</div><div class="item-desc">IATA stamp aesthetic</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">Did You Know</div><div class="item-desc">₦2m share capital fact</div></div><div class="ig-cal-cell"><span class="ct-tag ct-ai">AI</span><div class="item-name">AI travel scenes</div><div class="item-desc">Generated airport reel</div></div>
+
+    <div class="ig-cal-cell day-label">Sun</div>
+    <div class="ig-cal-cell"><span class="ct-tag ct-founder">Founder</span><div class="item-name">Founder quote</div><div class="item-desc">Slide-style milk poster</div></div><div class="ig-cal-cell"><span class="ct-tag ct-story">Story</span><div class="item-name">Testimony pull</div><div class="item-desc">Real client quote</div></div><div class="ig-cal-cell"><span class="ct-tag ct-random">Quiet</span><div class="item-name">(Rest)</div><div class="item-desc">No reel today</div></div>
+  </div>
+</section>
+
+<section class="section" id="ig-pin-1">
+  <div class="section-eyebrow">Instagram · Pin Post 1</div>
+  <div class="section-name">What we do — 6-slide carousel</div>
+  <div class="framework-strip"><span class="ct-tag ct-carousel">Carousel</span> Subtle. Minimal. Never a hard pitch.</div>
+  <div class="section-desc">The first thing visitors see on the Instagram profile. Open it, see the four layers, click through.</div>
+  <div class="grid">
+
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Open</span> Slide 1 · Cover</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp1-s1-cap"><b>What we do.</b>
+
+Four layers. One foundation.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp1-s1')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp1-s1">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">01</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Bizdoc · Instagram</div>
+      <div class="headline h-xl" contenteditable="true" data-key="ig-pp1-s1-h">What<br/>we do.</div>
+      <div class="sub" contenteditable="true" data-key="ig-pp1-s1-sub">Four layers. One foundation.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 1 · Cover</span></div>
+        <div class="signature" style="bottom:240px;right:100px;width:240px;height:240px;background-position:35% 50%;transform:rotate(10deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp1-s1')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Layer 1</span> Slide 2 · Certifications</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp1-s2-cap"><b>First — Certifications.</b>
+
+Make the business official.
+CAC. TIN. SCUML.
+
+The papers that turn a hustle into a company.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp1-s2')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp1-s2">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Layer 01</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp1-s2-h">Make the business <span class="accent">official.</span></div>
+      <div class="sub" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp1-s2-sub">CAC. TIN. SCUML. The papers that turn a hustle into a company.</div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 1 · Certs</span></div>
+        <div class="signature" style="top:240px;right:80px;width:200px;height:200px;background-position:70% 30%;transform:rotate(-12deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp1-s2')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Layer 2</span> Slide 3 · Compliance</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp1-s3-cap"><b>Second — Compliance.</b>
+
+Keep the business open.
+
+Monthly filings. Quarterly returns. Annual renewals.
+The quiet engine that keeps your TIN green.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp1-s3')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp1-s3">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Layer 02</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp1-s3-h">Keep the business <span class="accent">open.</span></div>
+      <div class="sub" contenteditable="true" data-key="ig-pp1-s3-sub">Monthly filings. Quarterly returns. Annual renewals. The quiet engine that keeps your TIN green.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 1 · Shield</span></div>
+        <div class="signature" style="bottom:220px;left:100px;width:220px;height:220px;background-position:25% 75%;transform:rotate(14deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp1-s3')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Layer 3</span> Slide 4 · Legal</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp1-s4-cap"><b>Third — Legal documents.</b>
+
+Protect what you built.
+
+Contracts. NDAs. Partnership agreements.
+The memory of every promise.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp1-s4')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp1-s4">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Layer 03</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp1-s4-h">Protect what <span class="accent">you built.</span></div>
+      <div class="sub" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp1-s4-sub">Contracts. NDAs. Partnership agreements. The memory of every promise.</div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 1 · Legal</span></div>
+        <div class="signature" style="top:280px;right:120px;width:180px;height:180px;background-position:50% 60%;transform:rotate(-9deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp1-s4')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Layer 4</span> Slide 5 · Industry</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp1-s5-cap"><b>Fourth — Industry packages.</b>
+
+Get specific.
+
+Mining permits. NAFDAC. CBN licences. IATA. NEPC.
+Whatever your industry asks for, we file.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp1-s5')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp1-s5">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Layer 04</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp1-s5-h">Get <span class="accent">specific.</span></div>
+      <div class="sub" contenteditable="true" data-key="ig-pp1-s5-sub">Mining permits. NAFDAC. CBN licences. IATA. NEPC. Whatever your industry asks for, we file.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 1 · Industry</span></div>
+        <div class="signature" style="bottom:180px;right:80px;width:220px;height:220px;background-position:80% 25%;transform:rotate(11deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp1-s5')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Path</span> Slide 6 · Subtle close</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp1-s6-cap">Built so you don't have to think about paper.
+
+When you're ready, send a message.
+We start with what is missing.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp1-s6')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-deep" id="story-ig-pp1-s6">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— A simple promise</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp1-s6-h">Built so you don't have to <span class="accent">think about paper.</span></div>
+      <div class="sub" contenteditable="true" data-key="ig-pp1-s6-sub">When you are ready, send a message. We will start with what is missing.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 1 · Close</span></div>
+        <div class="signature" style="top:200px;left:80px;width:240px;height:240px;background-position:40% 80%;transform:rotate(-13deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp1-s6')">⬇ PNG</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ig-pin-2">
+  <div class="section-eyebrow">Instagram · Pin Post 2</div>
+  <div class="section-name">How we do it — 8-slide carousel</div>
+  <div class="framework-strip"><span class="ct-tag ct-carousel">Carousel</span> Cover → list → explain each stage → close.</div>
+  <div class="section-desc">The process. Quiet, methodical, transparent.</div>
+  <div class="grid">
+
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Open</span> Slide 1 · Cover</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s1-cap"><b>How we do it.</b>
+
+Five steps. One handover.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s1')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp2-s1">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">01</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Bizdoc · Process</div>
+      <div class="headline h-xl" contenteditable="true" data-key="ig-pp2-s1-h">How<br/>we do it.</div>
+      <div class="sub" contenteditable="true" data-key="ig-pp2-s1-sub">Five steps. One handover.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 2 · Cover</span></div>
+        <div class="signature" style="bottom:240px;right:120px;width:240px;height:240px;background-position:55% 40%;transform:rotate(7deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s1')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Map</span> Slide 2 · The list</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s2-cap">The five steps.
+
+01 · Brief.
+02 · Audit.
+03 · File.
+04 · Track.
+05 · Deliver.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s2')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp2-s2">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— The five steps</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp2-s2-h">Brief. Audit. File. <span class="accent">Track. Deliver.</span></div>
+      <ul class="list" style="margin-top:32px">
+        <li><span class="n">01</span><div contenteditable="true" data-key="ig-pp2-s2-l1"><b>Brief</b> — we meet, you talk</div></li>
+        <li><span class="n">02</span><div contenteditable="true" data-key="ig-pp2-s2-l2"><b>Audit</b> — what you have, what's missing</div></li>
+        <li><span class="n">03</span><div contenteditable="true" data-key="ig-pp2-s2-l3"><b>File</b> — we handle every form</div></li>
+        <li><span class="n">04</span><div contenteditable="true" data-key="ig-pp2-s2-l4"><b>Track</b> — daily follow-up, weekly update</div></li>
+        <li><span class="n">05</span><div contenteditable="true" data-key="ig-pp2-s2-l5"><b>Deliver</b> — certificates in hand</div></li>
+      </ul>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 2 · Map</span></div>
+        <div class="signature" style="top:200px;right:100px;width:180px;height:180px;background-position:25% 40%;transform:rotate(-10deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s2')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Step 03</span> Slide · Step 03</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s3-cap"><b>03 · Brief.</b>
+
+We meet. You tell us the business. We listen.
+
+Twenty minutes. No forms yet.
+
+No proposals. No upsell. Just the facts of your business, in your words.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s3')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp2-s3">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Step 03</div>
+      <div class="step-num">03</div>
+      <div class="headline h-sm" contenteditable="true" data-key="ig-pp2-s3-h">Brief.</div>
+      <div class="sub" contenteditable="true" data-key="ig-pp2-s3-sub">We meet. You tell us the business. We listen.<br/><br/>Twenty minutes. No forms yet.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 2 · Step 03</span></div>
+        <div class="signature" style="bottom:180px;right:60px;width:200px;height:200px;background-position:30% 60%;transform:rotate(-8deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s3')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Step 04</span> Slide · Step 04</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s4-cap"><b>04 · Audit.</b>
+
+We list what you have. We list what is missing.
+
+You see the full picture before any work begins.
+
+A clear document. A clear cost. A clear timeline. No surprise charges, ever.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s4')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp2-s4">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Step 04</div>
+      <div class="step-num" style="color:var(--gold)">04</div>
+      <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp2-s4-h">Audit.</div>
+      <div class="sub" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp2-s4-sub">We list what you have. We list what is missing.<br/><br/>You see the full picture before any work begins.</div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 2 · Step 04</span></div>
+        <div class="signature" style="bottom:195px;right:80px;width:200px;height:200px;background-position:40% 55%;transform:rotate(-4deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s4')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Step 05</span> Slide · Step 05</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s5-cap"><b>05 · File.</b>
+
+We prepare every form. We file every application.
+
+You do not see CAC. You do not see FIRS. We do.
+
+Years of practice with the right officers, the right portals, the right paperwork.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s5')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp2-s5">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Step 05</div>
+      <div class="step-num">05</div>
+      <div class="headline h-sm" contenteditable="true" data-key="ig-pp2-s5-h">File.</div>
+      <div class="sub" contenteditable="true" data-key="ig-pp2-s5-sub">We prepare every form. We file every application.<br/><br/>You do not see CAC. You do not see FIRS. We do.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 2 · Step 05</span></div>
+        <div class="signature" style="bottom:210px;right:100px;width:200px;height:200px;background-position:50% 50%;transform:rotate(0deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s5')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Step 06</span> Slide · Step 06</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s6-cap"><b>06 · Track.</b>
+
+We follow up daily. We push back when needed.
+
+You get one weekly update with the status of every paper.
+
+No silence. No "we are still waiting." A real number, real names, real dates.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s6')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp2-s6">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Step 06</div>
+      <div class="step-num" style="color:var(--gold)">06</div>
+      <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp2-s6-h">Track.</div>
+      <div class="sub" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp2-s6-sub">We follow up daily. We push back when needed.<br/><br/>You get one weekly update with the status of every paper.</div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 2 · Step 06</span></div>
+        <div class="signature" style="bottom:225px;right:120px;width:200px;height:200px;background-position:60% 45%;transform:rotate(4deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s6')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Step 07</span> Slide · Step 07</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s7-cap"><b>07 · Deliver.</b>
+
+Certificates in hand. Dashboards green. Ongoing filings set up.
+
+Then we keep watching, monthly.
+
+You sign once. You move on. We stay quiet, behind the dashboards.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s7')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp2-s7">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">07</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Step 07</div>
+      <div class="step-num">07</div>
+      <div class="headline h-sm" contenteditable="true" data-key="ig-pp2-s7-h">Deliver.</div>
+      <div class="sub" contenteditable="true" data-key="ig-pp2-s7-sub">Certificates in hand. Dashboards green. Ongoing filings set up.<br/><br/>Then we keep watching, monthly.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 2 · Step 07</span></div>
+        <div class="signature" style="bottom:240px;right:140px;width:200px;height:200px;background-position:70% 40%;transform:rotate(8deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s7')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Path</span> Slide 8 · Close</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp2-s8-cap">From handshake to certificates.
+One quiet process.
+
+Reply 'start' when you are ready.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp2-s8')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-deep" id="story-ig-pp2-s8">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">08</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Bizdoc · Process</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp2-s8-h">From handshake<br/>to <span class="accent">certificates.</span></div>
+      <div class="sub" contenteditable="true" data-key="ig-pp2-s8-sub">One quiet process. Reply 'start' when you are ready.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 2 · Close</span></div>
+        <div class="signature" style="top:240px;right:120px;width:240px;height:240px;background-position:65% 70%;transform:rotate(9deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp2-s8')">⬇ PNG</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ig-pin-3">
+  <div class="section-eyebrow">Instagram · Pin Post 3</div>
+  <div class="section-name">Industry packages — 9-slide carousel</div>
+  <div class="framework-strip"><span class="ct-tag ct-carousel">Carousel</span> Cover → list of industries → docs per industry → close.</div>
+  <div class="section-desc">Every industry has its own paper. We file all of it.</div>
+  <div class="grid">
+
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Open</span> Slide 1 · Cover · industries list</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s1-cap"><b>Industries we serve.</b>
+
+Mining. Oil & gas. Schools. Hospitals.
+Export. Fintech. Travel. Pharma.
+Construction. Logistics. Food. Retail.
+
+If your industry has paper, we file it.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s1')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp3-s1">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">01</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Bizdoc · Industries</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp3-s1-h">Industries<br/>we <span class="accent">serve.</span></div>
+      <div class="industry-list">
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i1">Mining</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i2">Oil &amp; Gas</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i3">Schools</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i4">Hospitals</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i5">Export</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i6">Fintech</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i7">Travel</div>
+        <div class="ind" contenteditable="true" data-key="ig-pp3-s1-i8">Pharma</div>
+      </div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 3 · Cover</span></div>
+        <div class="signature" style="bottom:160px;right:80px;width:200px;height:200px;background-position:40% 60%;transform:rotate(12deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s1')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Mining</span> Slide 2 · Mining</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s2-cap"><b>Mining.</b>
+
+What your business needs, on paper:
+
+• CAC · TIN · VAT · SCUML
+• MCO Mining Lease (Mining Cadastre)
+• NESREA · Environmental Impact Assessment
+• DPR registration
+• PENCOM · ITF · NSITF (employer compliance)
+• Community Development Agreement
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s2')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp3-s2">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Industry</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp3-s2-h">Mining.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s2-d0">CAC · TIN · VAT · SCUML</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s2-d1">MCO Mining Lease (Mining Cadastre)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s2-d2">NESREA · Environmental Impact Assessment</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s2-d3">DPR registration</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s2-d4">PENCOM · ITF · NSITF (employer compliance)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s2-d5">Community Development Agreement</span></div>
+      </div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 3 · Mining</span></div>
+        <div class="signature" style="top:200px;right:80px;width:160px;height:160px;background-position:36% 40%;transform:rotate(-4deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s2')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Oil & Gas</span> Slide 3 · Oil & Gas</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s3-cap"><b>Oil & Gas.</b>
+
+What your business needs, on paper:
+
+• CAC · TIN · VAT · SCUML
+• DPR (Department of Petroleum Resources)
+• NUPRC permit
+• NCDMB · local content compliance
+• HSE certifications
+• Industry insurance
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s3')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp3-s3">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Industry</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp3-s3-h">Oil & Gas.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s3-d0">CAC · TIN · VAT · SCUML</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s3-d1">DPR (Department of Petroleum Resources)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s3-d2">NUPRC permit</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s3-d3">NCDMB · local content compliance</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s3-d4">HSE certifications</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s3-d5">Industry insurance</span></div>
+      </div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 3 · Oil & Gas</span></div>
+        <div class="signature" style="top:210px;right:90px;width:160px;height:160px;background-position:44% 45%;transform:rotate(-1deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s3')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Schools</span> Slide 4 · Schools</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s4-cap"><b>Schools.</b>
+
+What your business needs, on paper:
+
+• CAC · TIN
+• State Ministry of Education approval
+• NUC (university) · NBTE (polytechnic)
+• Curriculum approval
+• Site safety certification
+• Teacher qualifications register
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s4')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp3-s4">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Industry</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp3-s4-h">Schools.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s4-d0">CAC · TIN</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s4-d1">State Ministry of Education approval</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s4-d2">NUC (university) · NBTE (polytechnic)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s4-d3">Curriculum approval</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s4-d4">Site safety certification</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s4-d5">Teacher qualifications register</span></div>
+      </div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 3 · Schools</span></div>
+        <div class="signature" style="top:220px;right:100px;width:160px;height:160px;background-position:52% 50%;transform:rotate(2deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s4')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Hospitals</span> Slide 5 · Hospitals</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s5-cap"><b>Hospitals.</b>
+
+What your business needs, on paper:
+
+• CAC · TIN · VAT
+• State Ministry of Health licence
+• MDCN (doctors) · NMCN (nurses)
+• Pharmacists Council (PSN) · NAFDAC
+• Site inspection certificate
+• Medical waste disposal compliance
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s5')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp3-s5">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Industry</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp3-s5-h">Hospitals.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s5-d0">CAC · TIN · VAT</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s5-d1">State Ministry of Health licence</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s5-d2">MDCN (doctors) · NMCN (nurses)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s5-d3">Pharmacists Council (PSN) · NAFDAC</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s5-d4">Site inspection certificate</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s5-d5">Medical waste disposal compliance</span></div>
+      </div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 3 · Hospitals</span></div>
+        <div class="signature" style="top:230px;right:110px;width:160px;height:160px;background-position:60% 55%;transform:rotate(5deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s5')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Export</span> Slide 6 · Export</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s6-cap"><b>Export.</b>
+
+What your business needs, on paper:
+
+• CAC · TIN · VAT
+• NEPC registration
+• NXP form · CCVO certificate
+• HS Code classification
+• Bank exporter code
+• Product-specific certifications (SON, NAFDAC if relevant)
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s6')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp3-s6">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Industry</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp3-s6-h">Export.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s6-d0">CAC · TIN · VAT</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s6-d1">NEPC registration</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s6-d2">NXP form · CCVO certificate</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s6-d3">HS Code classification</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s6-d4">Bank exporter code</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s6-d5">Product-specific certifications (SON, NAFDAC if relevant)</span></div>
+      </div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 3 · Export</span></div>
+        <div class="signature" style="top:240px;right:120px;width:160px;height:160px;background-position:68% 60%;transform:rotate(8deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s6')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Fintech</span> Slide 7 · Fintech</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s7-cap"><b>Fintech.</b>
+
+What your business needs, on paper:
+
+• CAC · TIN · SCUML
+• CBN Payment Licence
+• NDPR audit
+• SEC VASP licence (crypto)
+• PCI-DSS readiness
+• Hardware security audit
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s7')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-green" id="story-ig-pp3-s7">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">07</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Industry</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp3-s7-h">Fintech.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s7-d0">CAC · TIN · SCUML</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s7-d1">CBN Payment Licence</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s7-d2">NDPR audit</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s7-d3">SEC VASP licence (crypto)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s7-d4">PCI-DSS readiness</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s7-d5">Hardware security audit</span></div>
+      </div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 3 · Fintech</span></div>
+        <div class="signature" style="top:250px;right:130px;width:160px;height:160px;background-position:76% 65%;transform:rotate(11deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s7')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Travel</span> Slide 8 · Travel</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s8-cap"><b>Travel.</b>
+
+What your business needs, on paper:
+
+• CAC (₦2m share capital)
+• IATA accreditation
+• NTDC licence · NANTA membership
+• TIN · VAT
+• Professional indemnity insurance
+• CBN bureau-de-change (if FX)
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s8')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-ig-pp3-s8">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">08</span></div>
+        <div class="story-body">
+      <div class="eyebrow" style="color:var(--green)">— Industry</div>
+      <div class="headline h-md" style="color:var(--green-ink)" contenteditable="true" data-key="ig-pp3-s8-h">Travel.</div>
+      <div class="doc-list">
+        <div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s8-d0">CAC (₦2m share capital)</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s8-d1">IATA accreditation</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s8-d2">NTDC licence · NANTA membership</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s8-d3">TIN · VAT</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s8-d4">Professional indemnity insurance</span></div>
+<div class="row"><span class="dot">·</span><span contenteditable="true" data-key="ig-pp3-s8-d5">CBN bureau-de-change (if FX)</span></div>
+      </div>
+    </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Pin 3 · Travel</span></div>
+        <div class="signature" style="top:260px;right:140px;width:160px;height:160px;background-position:84% 70%;transform:rotate(14deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s8')">⬇ PNG</button>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Path</span> Slide 9 · Subtle close</div>
+        <pre class="cap-text" contenteditable="true" data-key="ig-pp3-s9-cap">Your industry has its own paper.
+
+Reply with your industry name.
+We will send the full document list — and the cost.
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-ig-pp3-s9')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-deep" id="story-ig-pp3-s9">
+        <div class="story-head" ><span class="wordmark">Bizdoc</span><span class="num">09</span></div>
+        <div class="story-body">
+      <div class="eyebrow">— Bizdoc · Industries</div>
+      <div class="headline h-md" contenteditable="true" data-key="ig-pp3-s9-h">Reply with<br/>your <span class="accent">industry name.</span></div>
+      <div class="sub" contenteditable="true" data-key="ig-pp3-s9-sub">We will send the full document list — and the cost. No commitment.</div>
+    </div>
+        <div class="story-foot" ><span class="built">Built to last.</span><span class="built">Pin 3 · Close</span></div>
+        <div class="signature" style="bottom:140px;left:100px;width:260px;height:260px;background-position:75% 40%;transform:rotate(-11deg)"></div>
+      </div>
+      <button class="download" onclick="downloadOne('story-ig-pp3-s9')">⬇ PNG</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ig-reels">
+  <div class="section-eyebrow">Instagram · Reels library</div>
+  <div class="section-name">Six reels — one per content type</div>
+  <div class="section-desc">Script + shot pattern + video upload slot. Tag each by content type.</div>
+
+  <div class="reel-grid">
+
+    <div class="reel-card">
+      <h4 contenteditable="true" data-key="ig-reel-1-title"><span class="ct-tag ct-broll">B-roll</span> The Letter from FIRS</h4>
+      <div><div class="field-label">Script · 30 sec</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-1-script">[0:00] Phone close-up · "There is a letter you have not read yet."
+[0:04] Cut to founder · "From FIRS. To your TIN. Subject: Nil Return."
+[0:12] Phone showing TaxProMax dashboard
+[0:20] Founder eye contact · "The system does not get angry. It counts."
+[0:26] End plate · Reply 'shield'. Built to last.</div></div>
+      <div><div class="field-label">Shot pattern</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-1-pattern">Vertical 1080×1920. Phone close-up + founder mid-shot alternation. End plate with mark.</div></div>
+      <div><div class="field-label">Video</div>
+        <div class="reel-video-slot" onclick="attachVideo(this)"><input type="file" accept="video/*"/></div></div>
+    </div>
+
+    <div class="reel-card">
+      <h4 contenteditable="true" data-key="ig-reel-2-title"><span class="ct-tag ct-motion">Motion graphic</span> The 5 steps</h4>
+      <div><div class="field-label">Script · 20 sec</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-2-script">[0:00] "From handshake to certificates."
+[0:03] 01 · BRIEF appears
+[0:06] 02 · AUDIT appears
+[0:09] 03 · FILE appears
+[0:12] 04 · TRACK appears
+[0:15] 05 · DELIVER appears
+[0:18] End · Built to last.</div></div>
+      <div><div class="field-label">Shot pattern</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-2-pattern">Text-only animation. Milk background. Inter 700 white-on-green. Each step types in over 3 sec.</div></div>
+      <div><div class="field-label">Video</div>
+        <div class="reel-video-slot" onclick="attachVideo(this)"><input type="file" accept="video/*"/></div></div>
+    </div>
+
+    <div class="reel-card">
+      <h4 contenteditable="true" data-key="ig-reel-3-title"><span class="ct-tag ct-face">Face video</span> Founder explains shield</h4>
+      <div><div class="field-label">Script · 45 sec</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-3-script">[Founder, calm, milk wall, eye contact]
+
+"Most owners don't lose money to penalties. They lose it to forgetting. Three filings missed in a row costs ₦150,000 — and a flag on your TIN.
+
+For ₦150,000 a year, we watch the dashboards every day. We file every month, on the same day. If we miss a single one — we pay the penalty. Not you.
+
+That's the Shield.
+
+Reply 'shield' when you are ready. Built to last."</div></div>
+      <div><div class="field-label">Shot pattern</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-3-pattern">Single take. Founder mid-shot, framed slightly off-centre. Soft natural light. No music. End plate 2 sec.</div></div>
+      <div><div class="field-label">Video</div>
+        <div class="reel-video-slot" onclick="attachVideo(this)"><input type="file" accept="video/*"/></div></div>
+    </div>
+
+    <div class="reel-card">
+      <h4 contenteditable="true" data-key="ig-reel-4-title"><span class="ct-tag ct-ai">AI generated</span> Every industry has its own paper</h4>
+      <div><div class="field-label">Script · 25 sec</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-4-script">[Visual: AI scenes morphing through industries]
+"Mining."
+"Oil and gas."
+"Schools."
+"Hospitals."
+"Travel."
+"Fintech."
+[Voice-over over final scene]
+"Different industry. Same paper rule. We file all of it."
+[End plate]
+"Reply with your industry name. Built to last."</div></div>
+      <div><div class="field-label">Shot pattern</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-4-pattern">Sora / Veo / Runway-generated scenes, one per industry. 3 sec each. Smooth cuts. Founder voice-over.</div></div>
+      <div><div class="field-label">Video</div>
+        <div class="reel-video-slot" onclick="attachVideo(this)"><input type="file" accept="video/*"/></div></div>
+    </div>
+
+    <div class="reel-card">
+      <h4 contenteditable="true" data-key="ig-reel-5-title"><span class="ct-tag ct-random">Random</span> Certificates flat-lay</h4>
+      <div><div class="field-label">Script · 15 sec</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-5-script">[No words. Just sound.]
+[Hand placing certificates onto a milk-coloured surface, one by one. CAC. TIN. SCUML. PENCOM. NEPC.]
+[Final card]
+"What every serious business has on paper.
+Built to last."</div></div>
+      <div><div class="field-label">Shot pattern</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-5-pattern">Overhead shot, fixed camera. High resolution. Natural ambient sound (paper, hand). No voice.</div></div>
+      <div><div class="field-label">Video</div>
+        <div class="reel-video-slot" onclick="attachVideo(this)"><input type="file" accept="video/*"/></div></div>
+    </div>
+
+    <div class="reel-card">
+      <h4 contenteditable="true" data-key="ig-reel-6-title"><span class="ct-tag ct-founder">Founder</span> One sentence</h4>
+      <div><div class="field-label">Script · 10 sec</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-6-script">[Founder, full-frame, eye contact]
+
+"The system does not punish the busy. It simply notices them."
+
+[Pause. Small smile.]
+
+"Built to last."</div></div>
+      <div><div class="field-label">Shot pattern</div>
+        <div class="reel-field" contenteditable="true" data-key="ig-reel-6-pattern">Tight close-up. One take. Founder slowly delivers one sentence. End plate hold 2 sec.</div></div>
+      <div><div class="field-label">Video</div>
+        <div class="reel-video-slot" onclick="attachVideo(this)"><input type="file" accept="video/*"/></div></div>
+    </div>
+
+  </div>
+</section>
+
+</section>
 
   <!-- TIKTOK section -->
   <section class="platform-section" data-platform-content="tiktok">
@@ -2518,6 +3609,9 @@ Built to last.</pre>
     legal:       ['story-d4-s1','story-d4-founder','story-d4-s2','story-d4-s3','story-d4-s4','story-d4-s5'],
     tax:         ['story-t1-s1','story-t1-founder','story-t1-s2','story-t1-s3','story-t1-s4','story-t1-s5'],
     travel:      ['story-i1-s1','story-i1-founder','story-i1-s2','story-i1-s3','story-i1-s4','story-i1-s5'],
+    whatwedo:    ['story-ig-pp1-s1','story-ig-pp1-s2','story-ig-pp1-s3','story-ig-pp1-s4','story-ig-pp1-s5','story-ig-pp1-s6'],
+    howwedo:     ['story-ig-pp2-s1','story-ig-pp2-s2','story-ig-pp2-s3','story-ig-pp2-s4','story-ig-pp2-s5','story-ig-pp2-s6','story-ig-pp2-s7','story-ig-pp2-s8'],
+    industries:  ['story-ig-pp3-s1','story-ig-pp3-s2','story-ig-pp3-s3','story-ig-pp3-s4','story-ig-pp3-s5','story-ig-pp3-s6','story-ig-pp3-s7','story-ig-pp3-s8','story-ig-pp3-s9'],
   };
   let vState = { ids: [], i: 0, timer: null };
 
