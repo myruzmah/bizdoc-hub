@@ -466,6 +466,32 @@
   .bg-green .signature { filter: brightness(0) invert(1); opacity: 0.18; }
   .bg-deep  .signature { filter: brightness(0) invert(1); opacity: 0.16; }
 
+
+  /* === FOUNDER QUOTE SLIDE === */
+  .founder-quote-mark {
+    font-size: 260px; line-height: 0.7;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    margin-bottom: -40px;
+  }
+  .founder-quote {
+    font-size: 60px; font-weight: 500;
+    line-height: 1.2; letter-spacing: -0.01em;
+    max-width: 880px;
+    margin-top: 20px;
+  }
+  .founder-attr {
+    margin-top: 56px;
+    font-size: 24px; font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .founder-role {
+    font-size: 18px; font-weight: 500;
+    opacity: 0.6;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-top: 4px;
+  }
+
   /* === ENGAGEMENT STORY VARIANTS === */
   .badge.role-bts       { background: rgba(180,140,76,0.18); color: var(--gold); }
   .badge.role-reel      { background: var(--gold); color: var(--green-ink); }
@@ -561,21 +587,301 @@
     color: var(--green-ink);
   }
   .ghguide ol li b { font-weight: 600; color: var(--green); }
+
+  /* === APP LAYOUT WITH SIDEBAR === */
+  body { padding: 0; }
+  .app { display: flex; min-height: 100vh; }
+  .sidenav {
+    width: 240px; flex-shrink: 0;
+    background: var(--milk);
+    border-right: 1px solid var(--hairline);
+    padding: 28px 16px;
+    position: sticky; top: 0;
+    height: 100vh; overflow-y: auto;
+  }
+  .sidenav .sn-brand {
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green);
+    padding: 8px 14px 24px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 16px;
+  }
+  .sidenav nav { display: flex; flex-direction: column; gap: 4px; }
+  .nav-item {
+    background: transparent; border: none;
+    text-align: left;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 13px; font-weight: 500;
+    color: var(--charcoal);
+    cursor: pointer;
+    display: flex; align-items: center; gap: 10px;
+    transition: all 0.15s ease;
+  }
+  .nav-item:hover { background: var(--milk-soft); }
+  .nav-item.active { background: var(--green); color: var(--milk); font-weight: 600; }
+  .nav-icon { font-size: 16px; }
+  .nav-section-label {
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); padding: 18px 14px 6px;
+  }
+  .main-content { flex: 1; padding: 32px 24px 120px; max-width: 1400px; }
+  .platform-section { display: none; }
+  .platform-section.active { display: block; }
+  .coming-soon {
+    text-align: center;
+    padding: 120px 24px;
+    background: var(--milk);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+  }
+  .coming-soon h2 { font-size: 32px; font-weight: 700; color: var(--green-ink); margin-bottom: 12px; }
+  .coming-soon p { font-size: 14px; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+  .coming-soon .cs-badge {
+    display: inline-block; margin-bottom: 24px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--green); padding: 8px 16px;
+    background: var(--milk-soft); border-radius: 999px;
+  }
+
+  /* === PROFILE MOCKUP (WhatsApp Business) === */
+  .profile-mockup {
+    background: var(--milk);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .pm-header {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-ink) 100%);
+    color: var(--milk);
+    padding: 36px 32px 60px;
+    text-align: center;
+    position: relative;
+  }
+  .pm-avatar {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: var(--milk);
+    margin: 0 auto 16px;
+    display: flex; align-items: center; justify-content: center;
+    border: 3px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+  .pm-avatar .pm-mark {
+    width: 200%; height: 200%;
+    background-image: var(--logo);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(0.22) sepia(0.5) saturate(2.5) hue-rotate(105deg);
+    opacity: 0.85;
+    position: absolute; top: -50%; left: -50%;
+  }
+  .pm-name { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  .pm-handle { font-size: 13px; opacity: 0.7; margin-top: 4px; letter-spacing: 0.02em; }
+  .pm-body { padding: 24px 32px 28px; }
+  .pm-section { padding: 14px 0; border-bottom: 1px solid var(--hairline); }
+  .pm-section:last-child { border: none; }
+  .pm-section-label {
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 6px;
+  }
+  .pm-section-text {
+    font-size: 14px; color: var(--charcoal); line-height: 1.5;
+    outline: none; padding: 4px 8px; margin: -4px -8px;
+    border-radius: 6px;
+  }
+  .pm-row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .pm-row .pm-section { flex: 1; min-width: 180px; }
+  .pm-link { color: var(--green); font-weight: 600; }
+
+  /* === HIGHLIGHTS ROW === */
+  .highlights-row {
+    display: flex; gap: 16px; padding: 16px 0 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .highlight {
+    flex-shrink: 0;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 8px;
+    cursor: pointer; padding: 4px;
+    transition: transform 0.15s ease;
+  }
+  .highlight:hover { transform: translateY(-2px); }
+  .highlight-circle {
+    width: 76px; height: 76px;
+    border-radius: 50%;
+    background: var(--milk-soft);
+    border: 3px solid var(--gold);
+    padding: 3px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .highlight-circle::before {
+    content: ''; width: 100%; height: 100%; border-radius: 50%;
+    background-image: var(--logo);
+    background-position: center; background-size: 150%;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(0.22) sepia(0.5) saturate(2.5) hue-rotate(105deg);
+    opacity: 0.5;
+  }
+  .highlight-label {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--charcoal);
+    max-width: 76px; text-align: center;
+    line-height: 1.3;
+  }
+
+  /* === HIGHLIGHT VIEWER OVERLAY === */
+  .viewer {
+    position: fixed; inset: 0;
+    background: rgba(14, 42, 34, 0.92);
+    z-index: 1000;
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .viewer.open { display: flex; }
+  .viewer-frame {
+    width: min(360px, 90vw);
+    aspect-ratio: 9 / 16;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: var(--milk);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+  .viewer-progress {
+    position: absolute; top: 12px; left: 12px; right: 12px;
+    display: flex; gap: 4px;
+    z-index: 20;
+  }
+  .viewer-progress .bar {
+    flex: 1; height: 3px; background: rgba(255,255,255,0.3);
+    border-radius: 2px; overflow: hidden;
+  }
+  .viewer-progress .bar.done { background: var(--milk); }
+  .viewer-progress .bar.active::after {
+    content: ''; display: block; height: 100%; background: var(--milk);
+    animation: fillBar 4s linear forwards;
+  }
+  @keyframes fillBar { from { width: 0; } to { width: 100%; } }
+  .viewer-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(0,0,0,0.5); color: white;
+    border: none; cursor: pointer;
+    font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 30;
+  }
+  .viewer-nav { position: absolute; top: 0; bottom: 0; width: 33%; cursor: pointer; z-index: 15; }
+  .viewer-nav.prev { left: 0; }
+  .viewer-nav.next { right: 0; }
+
+  /* === REEL CARDS === */
+  .reel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .reel-card {
+    background: var(--milk);
+    border: 1px solid var(--hairline);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .reel-card h4 {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green);
+  }
+  .reel-card .field-label {
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 6px;
+  }
+  .reel-field {
+    font-family: inherit; font-size: 13px;
+    line-height: 1.6; color: var(--charcoal);
+    padding: 12px 14px;
+    background: var(--milk-soft);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    min-height: 60px; white-space: pre-wrap;
+    outline: none;
+  }
+  .reel-video-slot {
+    aspect-ratio: 9 / 16;
+    background: var(--milk-soft);
+    border: 2px dashed var(--gold);
+    border-radius: 14px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    cursor: pointer;
+    color: var(--green);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    text-align: center; padding: 24px;
+  }
+  .reel-video-slot::before { content: '▶'; font-size: 36px; color: var(--gold); margin-bottom: 12px; }
+  .reel-video-slot.has-video::before, .reel-video-slot.has-video::after { display: none; }
+  .reel-video-slot video { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+  .reel-video-slot input[type=file] { display: none; }
+
+  @media (max-width: 880px) {
+    .sidenav { display: none; }
+    .main-content { padding: 24px 16px; }
+  }
+
 </style>
 </head>
 <body>
 
-<div class="doc">
+<div class="app">
 
-<!-- ====== STICKY TOOLBAR ====== -->
+  <!-- ====== SIDEBAR NAV ====== -->
+  <aside class="sidenav">
+    <div class="sn-brand">Bizdoc · Hub</div>
+    <div class="nav-section-label">Platforms</div>
+    <nav>
+      <button class="nav-item active" data-platform="whatsapp" onclick="switchPlatform('whatsapp')"><span class="nav-icon">💬</span>WhatsApp</button>
+      <button class="nav-item" data-platform="instagram" onclick="switchPlatform('instagram')"><span class="nav-icon">📷</span>Instagram</button>
+      <button class="nav-item" data-platform="tiktok" onclick="switchPlatform('tiktok')"><span class="nav-icon">🎵</span>TikTok</button>
+      <button class="nav-item" data-platform="facebook" onclick="switchPlatform('facebook')"><span class="nav-icon">𝐟</span>Facebook</button>
+      <button class="nav-item" data-platform="x" onclick="switchPlatform('x')"><span class="nav-icon">𝕏</span>X / Twitter</button>
+    </nav>
+    <div class="nav-section-label" style="margin-top:24px">Jump to</div>
+    <nav>
+      <button class="nav-item" onclick="document.getElementById('profile').scrollIntoView({behavior:'smooth'})"><span class="nav-icon">◐</span>Profile</button>
+      <button class="nav-item" onclick="document.getElementById('cal').scrollIntoView({behavior:'smooth'})"><span class="nav-icon">▦</span>Calendar</button>
+      <button class="nav-item" onclick="document.getElementById('anchors').scrollIntoView({behavior:'smooth'})"><span class="nav-icon">⚑</span>Anchors</button>
+      <button class="nav-item" onclick="document.getElementById('day-1').scrollIntoView({behavior:'smooth'})"><span class="nav-icon">▤</span>Carousels</button>
+      <button class="nav-item" onclick="document.getElementById('engagement').scrollIntoView({behavior:'smooth'})"><span class="nav-icon">✦</span>Engagement</button>
+      <button class="nav-item" onclick="document.getElementById('reels').scrollIntoView({behavior:'smooth'})"><span class="nav-icon">▶</span>Reels</button>
+    </nav>
+  </aside>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <div class="main-content">
+
+  <section class="platform-section active" data-platform-content="whatsapp">
+
+  <!-- ====== STICKY TOOLBAR ====== -->
 <div class="toolbar-wrap">
   <div class="toolbar">
     <span class="tlogo">Bizdoc · Staff Hub</span>
     <button class="btn btn-primary"   onclick="downloadAll()">⬇ Download all PNGs (zip)</button>
-    <button class="btn btn-secondary" onclick="exportContent()">⤓ Export edits (JSON)</button>
-    <button class="btn btn-secondary" onclick="document.getElementById('import-file').click()">⤒ Import edits</button>
-    <input type="file" id="import-file" accept=".json" style="display:none" onchange="importContent(this.files[0])"/>
-    <button class="btn btn-ghost" onclick="document.getElementById('guide').scrollIntoView({behavior:'smooth'})">How to host on GitHub</button>
     <button class="btn btn-warn"  onclick="resetContent()">Reset to defaults</button>
     <span class="saved-pill"><span class="dot"></span><span id="save-status">Auto-saved locally</span></span>
   </div>
@@ -588,6 +894,54 @@
   <div class="tag" contenteditable="true" data-key="hub-tag">Papers that actually protect.</div>
   <p contenteditable="true" data-key="hub-intro">Everything your staff needs to run a week of posting — calendar, captions, posters and engagement templates. Edit any text inline. Your edits save in this browser automatically. Tap "Export edits" to share changes with the founder, or "Download all" to grab every PNG at once.</p>
 </div>
+
+<!-- ====== PROFILE MOCKUP (WhatsApp Business) ====== -->
+<div class="profile-mockup" id="profile">
+  <div class="pm-header">
+    <div class="pm-avatar"><div class="pm-mark"></div></div>
+    <div class="pm-name" contenteditable="true" data-key="pm-name">Bizdoc Nigeria</div>
+    <div class="pm-handle" contenteditable="true" data-key="pm-handle">A Hamzury Division · Business</div>
+  </div>
+  <div class="pm-body">
+    <div class="pm-section">
+      <div class="pm-section-label">About</div>
+      <div class="pm-section-text" contenteditable="true" data-key="pm-about">Papers that actually protect. We handle CAC, FIRS, NAFDAC and every certificate your business needs — so you can build it.</div>
+    </div>
+    <div class="pm-row">
+      <div class="pm-section">
+        <div class="pm-section-label">Hours</div>
+        <div class="pm-section-text" contenteditable="true" data-key="pm-hours">Mon–Fri · 9:00 – 17:00<br/>Sat · By appointment</div>
+      </div>
+      <div class="pm-section">
+        <div class="pm-section-label">Email</div>
+        <div class="pm-section-text" contenteditable="true" data-key="pm-email">bizdoc@hamzury.com</div>
+      </div>
+    </div>
+    <div class="pm-row">
+      <div class="pm-section">
+        <div class="pm-section-label">Address</div>
+        <div class="pm-section-text" contenteditable="true" data-key="pm-address">Lagos · Abuja · Jos<br/>Nigeria</div>
+      </div>
+      <div class="pm-section">
+        <div class="pm-section-label">Website</div>
+        <div class="pm-section-text pm-link" contenteditable="true" data-key="pm-website">hamzury.com/bizdoc</div>
+      </div>
+    </div>
+    <div class="pm-section">
+      <div class="pm-section-label">Highlights · tap to view</div>
+      <div class="highlights-row">
+        <div class="highlight" onclick="openViewer('open')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-open">Open today</div></div>
+        <div class="highlight" onclick="openViewer('newstarter')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-new">CAC & TIN</div></div>
+        <div class="highlight" onclick="openViewer('bids')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-bids">Bid-ready</div></div>
+        <div class="highlight" onclick="openViewer('shield')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-shield">Shield</div></div>
+        <div class="highlight" onclick="openViewer('legal')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-legal">Legal</div></div>
+        <div class="highlight" onclick="openViewer('tax')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-tax">Tax Trap</div></div>
+        <div class="highlight" onclick="openViewer('travel')"><div class="highlight-circle"></div><div class="highlight-label" contenteditable="true" data-key="hl-travel">Travel</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- ====== 7-DAY CALENDAR ====== -->
 <div class="calendar" id="cal">
@@ -817,6 +1171,33 @@ Built to last.</pre>
         <button class="download" onclick="downloadOne('story-d1-s1')">⬇ PNG</button>
       </div>
     </div>
+    <!-- FOUNDER · Slide 02 -->
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Founder</span> Slide 02 · post with image</div>
+        <pre class="cap-text" contenteditable="true" data-key="d1-founder-cap">Every business begins with a name. The name becomes a promise.
+
+— Muhammad Hamzury
+Founder · Hamzury
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d1-founder')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-d1-founder">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+          <div class="founder-quote-mark">"</div>
+          <div class="founder-quote" style="color:var(--green-ink)" contenteditable="true" data-key="d1-founder-q">Every business begins with a name. The name becomes a promise.</div>
+          <div class="founder-attr" style="color:var(--green-ink)" contenteditable="true" data-key="d1-founder-name">— Muhammad Hamzury</div>
+          <div class="founder-role" style="color:var(--green-ink)" contenteditable="true" data-key="d1-founder-role">Founder · Hamzury</div>
+        </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Day 1 · Founder</span></div>
+        <div class="signature" style="bottom:240px;right:80px;width:220px;height:220px;background-position:30% 50%;transform:rotate(10deg)"></div>
+      </div>
+        <button class="download" onclick="downloadOne('story-d1-founder')">⬇ PNG</button>
+      </div>
+    </div>
+
 
     <!-- D1 · S2 · REVEAL -->
     <div class="slot">
@@ -834,7 +1215,7 @@ Built to last.</pre>
       </div>
       <div class="frame">
         <div class="story bg-milk" id="story-d1-s2">
-          <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+          <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
           <div class="story-body">
             <span class="badge role-reveal">Reveal</span>
             <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d1-s2-h">The law follows the name on the paper.<br/><span class="accent">Not the invoice.</span></div>
@@ -863,7 +1244,7 @@ Built to last.</pre>
       </div>
       <div class="frame">
         <div class="story bg-green" id="story-d1-s3">
-          <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+          <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
           <div class="story-body">
             <span class="badge role-synopsis">Synopsis</span>
             <div class="headline h-sm" contenteditable="true" data-key="d1-s3-h">Same money.<br/><span class="accent">Different rules.</span></div>
@@ -899,7 +1280,7 @@ Built to last.</pre>
       </div>
       <div class="frame">
         <div class="story bg-milk" id="story-d1-s4">
-          <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+          <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
           <div class="story-body">
             <span class="badge role-reframe">Reframe</span>
             <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d1-s4-h">It is not laziness.<br/><span class="accent">It is delay.</span></div>
@@ -929,7 +1310,7 @@ Built to last.</pre>
       </div>
       <div class="frame">
         <div class="story bg-deep" id="story-d1-s5">
-          <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+          <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
           <div class="story-body">
             <div class="eyebrow">— Day 1 · Path</div>
             <div class="headline h-md" contenteditable="true" data-key="d1-s5-h">Reply<br/><span class="accent">'cac'</span><br/>when you are ready.</div>
@@ -972,6 +1353,33 @@ Built to last.</pre>
         <div class="signature" style="bottom:180px;right:80px;width:260px;height:260px;background-position:40% 60%;transform:rotate(-12deg)"></div>
       </div><button class="download" onclick="downloadOne('story-d2-s1')">⬇ PNG</button></div>
     </div>
+    <!-- FOUNDER · Slide 02 -->
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Founder</span> Slide 02 · post with image</div>
+        <pre class="cap-text" contenteditable="true" data-key="d2-founder-cap">Opportunity is a stranger who asks for your papers at the door.
+
+— Muhammad Hamzury
+Founder · Hamzury
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d2-founder')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-d2-founder">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+          <div class="founder-quote-mark">"</div>
+          <div class="founder-quote" style="color:var(--green-ink)" contenteditable="true" data-key="d2-founder-q">Opportunity is a stranger who asks for your papers at the door.</div>
+          <div class="founder-attr" style="color:var(--green-ink)" contenteditable="true" data-key="d2-founder-name">— Muhammad Hamzury</div>
+          <div class="founder-role" style="color:var(--green-ink)" contenteditable="true" data-key="d2-founder-role">Founder · Hamzury</div>
+        </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Day 2 · Founder</span></div>
+        <div class="signature" style="top:260px;right:100px;width:200px;height:200px;background-position:60% 30%;transform:rotate(-12deg)"></div>
+      </div>
+        <button class="download" onclick="downloadOne('story-d2-founder')">⬇ PNG</button>
+      </div>
+    </div>
+
 
     <div class="slot">
       <div class="caption"><div class="cap-eyebrow"><span class="role">Reveal</span> Slide 2</div>
@@ -984,7 +1392,7 @@ Four short words. Six months of admin if you start today.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d2-s2')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-d2-s2">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
         <div class="story-body">
           <span class="badge role-reveal">Reveal</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d2-s2-h">Four short words.<br/><span class="accent">Six months of admin.</span></div>
@@ -1006,7 +1414,7 @@ Bidding asks Tier 3. Most owners stop at Tier 1.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d2-s3')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-green" id="story-d2-s3">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
         <div class="story-body">
           <span class="badge role-synopsis">Synopsis</span>
           <div class="headline h-sm" contenteditable="true" data-key="d2-s3-h">Three tiers.<br/><span class="accent">One stops bidding.</span></div>
@@ -1036,7 +1444,7 @@ Or to whoever starts today.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d2-s4')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-d2-s4">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
         <div class="story-body">
           <span class="badge role-reframe">Reframe</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d2-s4-h">You were not late.<br/><span class="accent">The deadline was early.</span></div>
@@ -1059,7 +1467,7 @@ Reply 'bids' when you are ready.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d2-s5')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-deep" id="story-d2-s5">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
         <div class="story-body">
           <div class="eyebrow">— Day 2 · Path</div>
           <div class="headline h-md" contenteditable="true" data-key="d2-s5-h">Reply<br/><span class="accent">'bids'</span></div>
@@ -1096,6 +1504,33 @@ Built to last.</pre>
         <div class="signature" style="bottom:240px;right:120px;width:240px;height:240px;background-position:55% 35%;transform:rotate(15deg)"></div>
       </div><button class="download" onclick="downloadOne('story-d3-s1')">⬇ PNG</button></div>
     </div>
+    <!-- FOUNDER · Slide 02 -->
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Founder</span> Slide 02 · post with image</div>
+        <pre class="cap-text" contenteditable="true" data-key="d3-founder-cap">What you do not protect, you do not own.
+
+— Muhammad Hamzury
+Founder · Hamzury
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d3-founder')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-d3-founder">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+          <div class="founder-quote-mark">"</div>
+          <div class="founder-quote" style="color:var(--green-ink)" contenteditable="true" data-key="d3-founder-q">What you do not protect, you do not own.</div>
+          <div class="founder-attr" style="color:var(--green-ink)" contenteditable="true" data-key="d3-founder-name">— Muhammad Hamzury</div>
+          <div class="founder-role" style="color:var(--green-ink)" contenteditable="true" data-key="d3-founder-role">Founder · Hamzury</div>
+        </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Day 3 · Founder</span></div>
+        <div class="signature" style="bottom:200px;left:100px;width:220px;height:220px;background-position:25% 75%;transform:rotate(14deg)"></div>
+      </div>
+        <button class="download" onclick="downloadOne('story-d3-founder')">⬇ PNG</button>
+      </div>
+    </div>
+
 
     <div class="slot">
       <div class="caption"><div class="cap-eyebrow"><span class="role">Reveal</span> Slide 2</div>
@@ -1108,7 +1543,7 @@ The cost of forgetting is always more than the cost of remembering.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d3-s2')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-d3-s2">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
         <div class="story-body">
           <span class="badge role-reveal">Reveal</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d3-s2-h">Forgetting always costs more <span class="accent">than remembering.</span></div>
@@ -1132,7 +1567,7 @@ The quiet one keeps it.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d3-s3')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-green" id="story-d3-s3">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
         <div class="story-body">
           <span class="badge role-synopsis">Synopsis</span>
           <div class="headline h-sm" contenteditable="true" data-key="d3-s3-h">Every business has <span class="accent">two engines.</span></div>
@@ -1159,7 +1594,7 @@ The quiet engine asks for one feeding a month.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d3-s4')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-d3-s4">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
         <div class="story-body">
           <span class="badge role-reframe">Reframe</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d3-s4-h">A penalty is not a punishment.<br/><span class="accent">It is a fee for forgetting.</span></div>
@@ -1184,7 +1619,7 @@ Reply 'shield' when you are ready.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d3-s5')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-deep" id="story-d3-s5">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
         <div class="story-body">
           <div class="eyebrow">— Day 3 · Path</div>
           <div class="headline h-sm" contenteditable="true" data-key="d3-s5-h"><span class="accent">₦150,000</span><br/>a year.</div>
@@ -1224,6 +1659,33 @@ Built to last.</pre>
         <div class="signature" style="bottom:200px;right:80px;width:260px;height:260px;background-position:45% 30%;transform:rotate(-10deg)"></div>
       </div><button class="download" onclick="downloadOne('story-d4-s1')">⬇ PNG</button></div>
     </div>
+    <!-- FOUNDER · Slide 02 -->
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Founder</span> Slide 02 · post with image</div>
+        <pre class="cap-text" contenteditable="true" data-key="d4-founder-cap">A contract is the memory you write for a future you cannot predict.
+
+— Muhammad Hamzury
+Founder · Hamzury
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d4-founder')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-d4-founder">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+          <div class="founder-quote-mark">"</div>
+          <div class="founder-quote" style="color:var(--green-ink)" contenteditable="true" data-key="d4-founder-q">A contract is the memory you write for a future you cannot predict.</div>
+          <div class="founder-attr" style="color:var(--green-ink)" contenteditable="true" data-key="d4-founder-name">— Muhammad Hamzury</div>
+          <div class="founder-role" style="color:var(--green-ink)" contenteditable="true" data-key="d4-founder-role">Founder · Hamzury</div>
+        </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Day 4 · Founder</span></div>
+        <div class="signature" style="top:240px;right:80px;width:200px;height:200px;background-position:70% 40%;transform:rotate(-8deg)"></div>
+      </div>
+        <button class="download" onclick="downloadOne('story-d4-founder')">⬇ PNG</button>
+      </div>
+    </div>
+
 
     <div class="slot">
       <div class="caption"><div class="cap-eyebrow"><span class="role">Reveal</span> Slide 2</div>
@@ -1237,7 +1699,7 @@ An NDA gives you a case.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d4-s2')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-d4-s2">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
         <div class="story-body">
           <span class="badge role-reveal">Reveal</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d4-s2-h">A handshake gives you a story.<br/><span class="accent">An NDA gives you a case.</span></div>
@@ -1260,7 +1722,7 @@ Soft assets you lock in a contract.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d4-s3')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-green" id="story-d4-s3">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
         <div class="story-body">
           <span class="badge role-synopsis">Synopsis</span>
           <div class="headline h-sm" contenteditable="true" data-key="d4-s3-h">Two kinds of asset.<br/><span class="accent">Two kinds of lock.</span></div>
@@ -1286,7 +1748,7 @@ What you write down today is the kindness you give yourself in three years.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d4-s4')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-d4-s4">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
         <div class="story-body">
           <span class="badge role-reframe">Reframe</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="d4-s4-h">A contract is not distrust.<br/><span class="accent">It is memory.</span></div>
@@ -1312,7 +1774,7 @@ Reply 'legal' when you are ready.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-d4-s5')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-deep" id="story-d4-s5">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
         <div class="story-body">
           <div class="eyebrow">— Day 4 · Path</div>
           <div class="headline h-md" contenteditable="true" data-key="d4-s5-h">Reply<br/><span class="accent">'legal'</span></div>
@@ -1355,6 +1817,33 @@ Built to last.</pre>
         <div class="signature" style="bottom:240px;right:120px;width:240px;height:240px;background-position:35% 70%;transform:rotate(-13deg)"></div>
       </div><button class="download" onclick="downloadOne('story-t1-s1')">⬇ PNG</button></div>
     </div>
+    <!-- FOUNDER · Slide 02 -->
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Founder</span> Slide 02 · post with image</div>
+        <pre class="cap-text" contenteditable="true" data-key="t1-founder-cap">The law does not punish the busy. It simply notices them.
+
+— Muhammad Hamzury
+Founder · Hamzury
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-t1-founder')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-t1-founder">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+          <div class="founder-quote-mark">"</div>
+          <div class="founder-quote" style="color:var(--green-ink)" contenteditable="true" data-key="t1-founder-q">The law does not punish the busy. It simply notices them.</div>
+          <div class="founder-attr" style="color:var(--green-ink)" contenteditable="true" data-key="t1-founder-name">— Muhammad Hamzury</div>
+          <div class="founder-role" style="color:var(--green-ink)" contenteditable="true" data-key="t1-founder-role">Founder · Hamzury</div>
+        </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Tax · Founder</span></div>
+        <div class="signature" style="bottom:260px;right:120px;width:230px;height:230px;background-position:45% 65%;transform:rotate(11deg)"></div>
+      </div>
+        <button class="download" onclick="downloadOne('story-t1-founder')">⬇ PNG</button>
+      </div>
+    </div>
+
 
     <div class="slot">
       <div class="caption"><div class="cap-eyebrow"><span class="role">Reveal</span> Slide 2</div>
@@ -1367,7 +1856,7 @@ Every month you do not file, your business moves one row down a list.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-t1-s2')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-t1-s2">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
         <div class="story-body">
           <span class="badge role-reveal">Reveal</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="t1-s2-h">From FIRS.<br/><span class="accent">To your TIN.</span></div>
@@ -1391,7 +1880,7 @@ One is a relief. The other is a requirement.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-t1-s3')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-green" id="story-t1-s3">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
         <div class="story-body">
           <span class="badge role-synopsis">Synopsis</span>
           <div class="headline h-sm" contenteditable="true" data-key="t1-s3-h">Exempt is not<br/><span class="accent">excluded.</span></div>
@@ -1417,7 +1906,7 @@ The owners who lost their TIN last year were not careless. They were busy.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-t1-s4')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-t1-s4">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
         <div class="story-body">
           <span class="badge role-reframe">Reframe</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="t1-s4-h">A penalty is not punishment.<br/><span class="accent">It is administration.</span></div>
@@ -1441,7 +1930,7 @@ Reply 'shield' when you are ready.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-t1-s5')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-deep" id="story-t1-s5">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
         <div class="story-body">
           <div class="eyebrow">— Tax · Path</div>
           <div class="headline h-md" contenteditable="true" data-key="t1-s5-h">The list is <span class="accent">one name shorter.</span></div>
@@ -1482,6 +1971,33 @@ Built to last.</pre>
         <div class="signature" style="bottom:200px;right:100px;width:240px;height:240px;background-position:50% 60%;transform:rotate(15deg)"></div>
       </div><button class="download" onclick="downloadOne('story-i1-s1')">⬇ PNG</button></div>
     </div>
+    <!-- FOUNDER · Slide 02 -->
+    <div class="slot">
+      <div class="caption">
+        <div class="cap-eyebrow"><span class="role">Founder</span> Slide 02 · post with image</div>
+        <pre class="cap-text" contenteditable="true" data-key="i1-founder-cap">Behind every easy journey, someone filed the harder paper.
+
+— Muhammad Hamzury
+Founder · Hamzury
+
+Built to last.</pre>
+        <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-i1-founder')">⬇ PNG</button></div>
+      </div>
+      <div class="frame"><div class="story bg-milk" id="story-i1-founder">
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-body">
+          <div class="founder-quote-mark">"</div>
+          <div class="founder-quote" style="color:var(--green-ink)" contenteditable="true" data-key="i1-founder-q">Behind every easy journey, someone filed the harder paper.</div>
+          <div class="founder-attr" style="color:var(--green-ink)" contenteditable="true" data-key="i1-founder-name">— Muhammad Hamzury</div>
+          <div class="founder-role" style="color:var(--green-ink)" contenteditable="true" data-key="i1-founder-role">Founder · Hamzury</div>
+        </div>
+        <div class="story-foot" style="color:var(--green)"><span class="built">Built to last.</span><span class="built">Travel · Founder</span></div>
+        <div class="signature" style="top:200px;left:100px;width:200px;height:200px;background-position:55% 30%;transform:rotate(-13deg)"></div>
+      </div>
+        <button class="download" onclick="downloadOne('story-i1-founder')">⬇ PNG</button>
+      </div>
+    </div>
+
 
     <div class="slot">
       <div class="caption"><div class="cap-eyebrow"><span class="role">Reveal</span> Slide 2</div>
@@ -1493,7 +2009,7 @@ Two papers that decide whether you are an agency — or a middleman.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-i1-s2')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-i1-s2">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">02</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
         <div class="story-body">
           <span class="badge role-reveal">Reveal</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="i1-s2-h">Agency.<br/>Or <span class="accent">middleman.</span></div>
@@ -1518,7 +2034,7 @@ Skip a step. Lose six months.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-i1-s3')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-green" id="story-i1-s3">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">03</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
         <div class="story-body">
           <span class="badge role-synopsis">Synopsis</span>
           <div class="headline h-sm" contenteditable="true" data-key="i1-s3-h">The travel stack,<br/><span class="accent">in order.</span></div>
@@ -1548,7 +2064,7 @@ Wrong number on day one. Six months lost on day ninety.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-i1-s4')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-milk" id="story-i1-s4">
-        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">04</span></div>
+        <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
         <div class="story-body">
           <span class="badge role-reframe">Reframe</span>
           <div class="fact-num">₦2m</div>
@@ -1568,7 +2084,7 @@ Reply 'travel' when you are ready.
 Built to last.</pre>
         <div class="cap-actions"><button class="cap-btn" onclick="copyCaption(this)">Copy</button><button class="cap-btn" onclick="downloadOne('story-i1-s5')">⬇ PNG</button></div></div>
       <div class="frame"><div class="story bg-deep" id="story-i1-s5">
-        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">05</span></div>
+        <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">06</span></div>
         <div class="story-body">
           <div class="eyebrow">— Travel · Path</div>
           <div class="headline h-lg" contenteditable="true" data-key="i1-s5-h">Reply<br/><span class="accent">'travel'</span></div>
@@ -1603,7 +2119,7 @@ Built to last.</pre>
       <div class="frame"><div class="story bg-milk" id="story-bts-1">
         <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">BTS</span></div>
         <div class="story-body" style="justify-content:flex-start">
-          <span class="badge role-bts">Behind the scenes</span>
+          <span class="badge role-bts" contenteditable="true" data-key="bts-1-badge">Behind the scenes</span>
           <div class="headline h-sm" style="color:var(--green-ink)" contenteditable="true" data-key="bts-1-h">A quiet morning<br/>at Bizdoc.</div>
           <div class="img-slot" onclick="attachImage(this)"><input type="file" accept="image/*"/></div>
         </div>
@@ -1629,7 +2145,7 @@ Built to last.</pre>
       <div class="frame"><div class="story bg-deep" id="story-reel-1">
         <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">▶</span></div>
         <div class="story-body" style="justify-content:flex-start">
-          <span class="badge role-reel">Reel</span>
+          <span class="badge role-reel" contenteditable="true" data-key="reel-1-badge">Reel</span>
           <div class="headline h-sm" contenteditable="true" data-key="reel-1-h">Two minutes on <span class="accent">what most owners</span> get wrong.</div>
           <div class="play-circle"><div class="triangle"></div></div>
           <div class="sub" style="text-align:center;margin-top:32px" contenteditable="true" data-key="reel-1-sub">Full reel on Instagram. Link in bio.</div>
@@ -1686,7 +2202,7 @@ Built to last.</pre>
       <div class="frame"><div class="story bg-green" id="story-poll-1">
         <div class="story-head"><span class="wordmark">Bizdoc</span><span class="num">?</span></div>
         <div class="story-body">
-          <span class="badge role-poll">Honest question</span>
+          <span class="badge role-poll" contenteditable="true" data-key="poll-1-badge">Honest question</span>
           <div class="headline h-sm" contenteditable="true" data-key="poll-1-h">Have you filed<br/><span class="accent">every month this year?</span></div>
           <div class="poll-options">
             <div class="poll-opt"><span class="letter">A</span><span contenteditable="true" data-key="poll-1-a">Yes. Every month.</span></div>
@@ -1718,7 +2234,7 @@ Built to last.</pre>
       <div class="frame"><div class="story bg-milk" id="story-dyk-1">
         <div class="story-head" style="color:var(--green)"><span class="wordmark">Bizdoc</span><span class="num">?</span></div>
         <div class="story-body">
-          <span class="badge role-dyk">Did you know</span>
+          <span class="badge role-dyk" contenteditable="true" data-key="dyk-1-badge">Did you know</span>
           <div class="dyk-q" style="color:var(--green-ink)" contenteditable="true" data-key="dyk-1-q">What is the minimum share capital for a travel agency at CAC?</div>
           <div class="dyk-a" style="color:var(--green-ink)" contenteditable="true" data-key="dyk-1-a"><b>₦2,000,000.</b> Most agencies file the default ₦100,000 and stop at IATA stage.</div>
         </div>
@@ -1729,30 +2245,55 @@ Built to last.</pre>
   </div>
 </section>
 
-<!-- ====== GITHUB GUIDE ====== -->
-<div class="ghguide" id="guide">
-  <h3>Hosting</h3>
-  <h2>How to share this with your staff on GitHub</h2>
-  <ol>
-    <li><b>Create a free GitHub account</b> at <a href="https://github.com" target="_blank" rel="noopener">github.com</a> if you do not have one. Username will be in the link, choose carefully (e.g. <code>hamzury</code>).</li>
-    <li><b>Create a new public repository</b>. Name it <code>bizdoc-hub</code>. Do not add a README.</li>
-    <li><b>Upload this file as <code>index.html</code>.</b> On the empty repository page, click "uploading an existing file" — drag <code>bizdoc-hub.html</code> in, rename to <code>index.html</code>, click "Commit changes".</li>
-    <li><b>Enable GitHub Pages.</b> In the repo, go to Settings → Pages. Under "Source", choose Deploy from a branch → branch <code>main</code> → folder <code>/ (root)</code>. Save.</li>
-    <li><b>Wait two minutes</b>, then go to <code>https://[your-username].github.io/bizdoc-hub/</code>. The page is live.</li>
-    <li><b>Share the link with staff.</b> They open it, edit captions inline (their edits save in their own browser), copy text and download PNGs.</li>
-    <li><b>To centralise edits</b>: anyone clicks "Export edits (JSON)" → sends the file to you on WhatsApp → you commit it to the repo as <code>content.json</code> (we can wire it to load automatically — say the word and I'll add it).</li>
-  </ol>
-  <p style="margin-top:24px;font-size:12px;color:var(--muted);line-height:1.6">
-    <b>Tip:</b> if you want a custom domain like <code>hub.hamzury.com</code>, in Settings → Pages → Custom domain, enter the subdomain and add a CNAME record in your DNS pointing to <code>[your-username].github.io</code>. Free.
-  </p>
-</div>
+</section>
 
-<div class="doc-header" style="margin-top:48px">
-  <p style="font-size:12px;color:var(--muted)">
-    Bizdoc Staff Hub · brand-locked 2026-04 · Hamzury mark as signature · Inter 400/500/600/700 · milk #FFFBEB
-  </p>
-</div>
+  <!-- INSTAGRAM section -->
+  <section class="platform-section" data-platform-content="instagram">
+    <div class="coming-soon">
+      <span class="cs-badge">Coming next</span>
+      <h2>Instagram</h2>
+      <p>Same content, adapted for Instagram feed (1080×1350), reels (1080×1920), and stories. The captions stay; the layouts change. Ask me when you're ready.</p>
+    </div>
+  </section>
 
+  <!-- TIKTOK section -->
+  <section class="platform-section" data-platform-content="tiktok">
+    <div class="coming-soon">
+      <span class="cs-badge">Coming next</span>
+      <h2>TikTok</h2>
+      <p>Vertical video format, hook-driven scripts adapted for sound-on. Reels and TikToks share the same script library — pick the platform that fits each post.</p>
+    </div>
+  </section>
+
+  <!-- FACEBOOK section -->
+  <section class="platform-section" data-platform-content="facebook">
+    <div class="coming-soon">
+      <span class="cs-badge">Coming next</span>
+      <h2>Facebook</h2>
+      <p>Posts, stories and reels for Facebook. Same carousels, slightly different cadence for the older audience.</p>
+    </div>
+  </section>
+
+  <!-- X section -->
+  <section class="platform-section" data-platform-content="x">
+    <div class="coming-soon">
+      <span class="cs-badge">Coming next</span>
+      <h2>X / Twitter</h2>
+      <p>Thread versions of the carousels. The Hook becomes the first tweet. The Path becomes the last. The framework holds.</p>
+    </div>
+  </section>
+
+  </div><!-- /.main-content -->
+</div><!-- /.app -->
+
+<!-- HIGHLIGHT VIEWER OVERLAY -->
+<div class="viewer" id="viewer">
+  <div class="viewer-frame" id="viewer-frame">
+    <div class="viewer-progress" id="viewer-progress"></div>
+    <div class="viewer-nav prev" onclick="viewerPrev()"></div>
+    <div class="viewer-nav next" onclick="viewerNext()"></div>
+    <button class="viewer-close" onclick="closeViewer()">×</button>
+  </div>
 </div>
 
 <script>
@@ -1955,6 +2496,100 @@ Built to last.</pre>
     progress.textContent = '✓ Saved ' + stories.length + ' files to bizdoc-hub-stories.zip';
     setTimeout(() => progress.classList.remove('show'), 4000);
   }
+
+
+  /* ============================
+     PLATFORM SWITCHING
+     ============================ */
+  function switchPlatform(name) {
+    document.querySelectorAll('.nav-item[data-platform]').forEach(b => b.classList.toggle('active', b.dataset.platform === name));
+    document.querySelectorAll('.platform-section').forEach(s => s.classList.toggle('active', s.dataset.platformContent === name));
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  /* ============================
+     HIGHLIGHT VIEWER
+     ============================ */
+  const collections = {
+    open:        ['story-anchor-open', 'story-anchor-menu', 'story-anchor-close'],
+    newstarter:  ['story-d1-s1','story-d1-founder','story-d1-s2','story-d1-s3','story-d1-s4','story-d1-s5'],
+    bids:        ['story-d2-s1','story-d2-founder','story-d2-s2','story-d2-s3','story-d2-s4','story-d2-s5'],
+    shield:      ['story-d3-s1','story-d3-founder','story-d3-s2','story-d3-s3','story-d3-s4','story-d3-s5'],
+    legal:       ['story-d4-s1','story-d4-founder','story-d4-s2','story-d4-s3','story-d4-s4','story-d4-s5'],
+    tax:         ['story-t1-s1','story-t1-founder','story-t1-s2','story-t1-s3','story-t1-s4','story-t1-s5'],
+    travel:      ['story-i1-s1','story-i1-founder','story-i1-s2','story-i1-s3','story-i1-s4','story-i1-s5'],
+  };
+  let vState = { ids: [], i: 0, timer: null };
+
+  function openViewer(key) {
+    const ids = collections[key] || [];
+    if (!ids.length) return;
+    vState = { ids, i: 0, timer: null };
+    document.getElementById('viewer').classList.add('open');
+    showSlide();
+  }
+  function closeViewer() {
+    document.getElementById('viewer').classList.remove('open');
+    if (vState.timer) clearTimeout(vState.timer);
+    const f = document.getElementById('viewer-frame');
+    // remove any clone
+    f.querySelectorAll('.viewer-clone').forEach(n => n.remove());
+  }
+  function showSlide() {
+    const frame = document.getElementById('viewer-frame');
+    frame.querySelectorAll('.viewer-clone').forEach(n => n.remove());
+    const id = vState.ids[vState.i];
+    const src = document.getElementById(id);
+    if (!src) { closeViewer(); return; }
+    const clone = src.cloneNode(true);
+    clone.classList.add('viewer-clone');
+    clone.style.position = 'absolute';
+    clone.style.top = '0'; clone.style.left = '0';
+    clone.style.transform = 'scale(' + (frame.clientWidth / 1080) + ')';
+    clone.style.transformOrigin = 'top left';
+    clone.removeAttribute('id');
+    // disable contenteditable inside the clone
+    clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    frame.insertBefore(clone, frame.firstChild);
+    // progress bars
+    const prog = document.getElementById('viewer-progress');
+    prog.innerHTML = vState.ids.map((_, idx) => {
+      const cls = idx < vState.i ? 'done' : (idx === vState.i ? 'active' : '');
+      return '<div class="bar ' + cls + '"></div>';
+    }).join('');
+    // auto-advance
+    if (vState.timer) clearTimeout(vState.timer);
+    vState.timer = setTimeout(viewerNext, 4000);
+  }
+  function viewerNext() {
+    if (vState.i < vState.ids.length - 1) { vState.i++; showSlide(); }
+    else closeViewer();
+  }
+  function viewerPrev() {
+    if (vState.i > 0) { vState.i--; showSlide(); }
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('viewer').classList.contains('open')) return;
+    if (e.key === 'ArrowRight' || e.key === ' ') viewerNext();
+    if (e.key === 'ArrowLeft') viewerPrev();
+    if (e.key === 'Escape') closeViewer();
+  });
+
+  /* ============================
+     VIDEO ATTACH
+     ============================ */
+  function attachVideo(slot) {
+    const input = slot.querySelector('input[type=file]');
+    input.click();
+    input.onchange = () => {
+      const f = input.files[0]; if (!f) return;
+      slot.querySelectorAll('video').forEach(v => v.remove());
+      const v = document.createElement('video');
+      v.src = URL.createObjectURL(f); v.controls = true;
+      slot.appendChild(v); slot.classList.add('has-video');
+    };
+  }
+
 </script>
 
 </body>
